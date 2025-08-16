@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRICKET WORLD</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyuP9GyDy9ZckTyVSD4GaZTWYRnMd0-xEhhw&s') no-repeat center center/cover;
+      color: white;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      backdrop-filter: blur(12px);
+      background: hsla(14, 94%, 51%, 0.91);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: 800;
+      color: rgba(0, 153, 255, 1);
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 16px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: rgba(1, 18, 19, 1);
+      left: 0;
+      bottom: -5px;
+      transition: 0.4s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .icc-logo {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 60px;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: hsla(0, 2%, 8%, 0.40);
+      z-index: 0;
+    }
+
+    .icc-content {
+      position: relative;
+      z-index: 1;
+      max-width: 50%;
+    }
+
+    .icc-content h1 {
+      font-size: 4.2rem;
+      font-weight: bold;
+      line-height: 1.2;
+      color: rgba(255, 251, 0, 1);
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .icc-content p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 14px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      background: linear-gradient(90deg, rgba(0, 225, 255, 1), #ff8800);
+      border: none;
+      color: black;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00ffffff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 183, 255, 1);
+    }
+
+    .icc-images {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 40px;
+    }
+
+    .icc-images img {
+      height: 300px;
+      border-radius: 30px;
+      box-shadow: 0 0 30px black;
+      transition: transform 0.4s ease;
+    }
+
+    .icc-images img:hover {
+      transform: scale(1.05) rotate(-1deg);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: #ccc;
+      font-size: 14px;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .icc-logo {
+        flex-direction: column;
+        padding-top: 120px;
+        gap: 40px;
+        text-align: center;
+      }
+      .icc-content {
+        max-width: 90%;
+      }
+      .icc-images {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .icc-images img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🏏 Cricket World</div>
+    <nav>
+      <a href="index.html">home</a>
+      <a href="players.html">Players</a>
+      <a href="teams.html">Teams</a>
+      <a href="rankings.html">Rankings</a>
+      <a href="stadiums.html">Stadiums</a>
+      <a href="leagues.html">Leagues</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <div class="icc-logo">
+    <div class="overlay"></div>
+
+    <div class="icc-content">
+      <h1>Welcome to<br>Cricket World</h1>
+      <p>Explore legendary players, global teams, and the future of cricket leagues.</p>
+    </div>
+
+    <div class="icc-images">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCuzbckBBgJ9mNNLiWq3aPKKzuBMOEuE3e5A&s" alt="hello">
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Cricket world | Designed by Yuvi
+  </div>
+
+</body>
+</html>  
